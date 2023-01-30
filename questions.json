@@ -1,0 +1,37 @@
+{
+	"quiz_name": "General Knowledge Quiz",
+	"questions": [
+		{
+			"type": "multiple_choice",
+			"question": "What is the capital of France?",
+			"options": [
+				"Paris",
+				"London",
+				"Berlin",
+				"Madrid"
+			],
+			"answer": "Paris"
+		},
+		{
+			"type": "true_false",
+			"question": "The Great Wall of China is visible from space with the naked eye.",
+			"answer": false
+		},
+		{
+			"type": "multiple_choice",
+			"question": "What is the largest planet in our solar system?",
+			"options": [
+				"Jupiter",
+				"Saturn",
+				"Uranus",
+				"Neptune"
+			],
+			"answer": "Jupiter"
+		},
+		{
+			"type": "true_false",
+			"question": "The Mona Lisa is a painting by Leonardo da Vinci.",
+			"answer": true
+		}
+	]
+}
