@@ -5,9 +5,6 @@
 # and returns an instance of either MultipleChoiceQuestion or TrueFalseQuestion depending on the value
 # of the type key.
 
-# Object composition pattern: The Quiz class contains an instance of QuestionFactory and a list of questions.
-# The load_questions method uses the factory to create instances of questions and add them to the list.
-
 # Facade pattern: The QuizFacade class provides a simplified interface to the functionality of the Quiz
 # and QuestionFactory classes. It reads the question data from a file,
 # creates a Quiz object with the question factory and loads the questions.
