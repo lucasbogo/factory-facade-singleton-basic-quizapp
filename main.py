@@ -5,6 +5,7 @@
 # and returns an instance of either MultipleChoiceQuestion or TrueFalseQuestion depending on the value
 # of the type key.
 
+
 # Facade pattern: The QuizFacade class provides a simplified interface to the functionality of the Quiz
 # and QuestionFactory classes. It reads the question data from a file,
 # creates a Quiz object with the question factory and loads the questions.
