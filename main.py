@@ -87,7 +87,9 @@ class Quiz(QuizInterface):
         return self.questions
     
 class QuizFacade:
-    def __init__(self, quiz_data):
+    def __init__(self, quiz_data_filename):
+        with open(quiz_data_filename) as f:
+            quiz_data = json.load(f)
         self.quiz_data = quiz_data
         self.question_factory = QuestionFactory()
         self.quiz = Quiz(self.question_factory)
@@ -101,6 +103,6 @@ class QuizFacade:
 
 # finalmente, aqui ele cria a instância da classe QuizFacade e atribui ao atributo quiz_facade com o nome do arquivo json
 if __name__ == "__main__":
-    quiz_facade = QuizFacade("questions.json")
-    # aqui ele usa o método take_quiz da classe QuizFacade para iniciar o quiz
+    quiz_facade = QuizFacade(json.load(open("questions.json")))
     quiz_facade.take_quiz()
+    print(quiz_facade.get_questions())
