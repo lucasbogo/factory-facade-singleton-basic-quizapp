@@ -103,6 +103,6 @@ class QuizFacade:
 
 # finalmente, aqui ele cria a instância da classe QuizFacade e atribui ao atributo quiz_facade com o nome do arquivo json
 if __name__ == "__main__":
-    quiz_facade = QuizFacade(json.load(open("questions.json")))
+    quiz_facade = QuizFacade("questions.json")
     quiz_facade.take_quiz()
     print(quiz_facade.get_questions())
