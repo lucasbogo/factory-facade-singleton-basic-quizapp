@@ -1,4 +1,5 @@
 import json
+from abc import ABC, abstractmethod
 
 # o QuestionFactory é um factory, ele cria objetos de acordo com o tipo de pergunta...
 
@@ -29,8 +30,6 @@ class QuestionFactory:
             raise ValueError("Invalid question type")
 
 # Parte do padrão de projeto Factory, aqui ele cria uma classe para cada tipo de pergunta, neste caso, MultipleChoiceQuestion
-
-
 class MultipleChoiceQuestion:
     # aqui ele cria o construtor da classe, passando o question_data como parâmetro
     def __init__(self, question_data):
@@ -108,7 +107,7 @@ class Quiz:
 
 class QuizFacade:
     # aqui ele cria o construtor da classe, passando o question_data_file como parâmetro
-    def __init__(self, question_data_file):
+    def __init__(self, file):
         # aqui ele cria os atributos da classe...
         # question_data_file é o nome do arquivo json que contém as perguntas
         # então ele cria uma instância de QuestionFactory e atribui ao atributo question_factory
