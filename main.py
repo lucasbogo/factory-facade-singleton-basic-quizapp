@@ -2,7 +2,10 @@ import json
 
 # o QuestionFactory é um factory, ele cria objetos de acordo com o tipo de pergunta...
 
-
+# question factory com padrão de projeto Singleton. 
+# O que o singleton faz é garantir que só exista uma instância de uma classe em todo o programa.
+# Aqui ele cria uma classe chamada QuestionFactory e cria um atributo 
+# estático chamado _instance para armazenar a instância da classe e garantir que só exista uma instância da classe
 class QuestionFactory:
     _instance = None
 
@@ -123,27 +126,6 @@ class QuizFacade:
         quiz.load_questions(self.question_data)
         # finalmente, aqui ele usa o método take da classe Quiz para iniciar o quiz
         quiz.take()
-
-# padrão de projeto Singleton, aqui ele cria uma classe para garantir que só exista uma instância da classe QuizFacade
-
-
-# class QuizSingleton:
-#    # aqui ele cria o atributo _instance, que é o atributo que vai armazenar a instância da classe QuizFacade
-#    # com valor inicial None porque ainda não existe uma instância
-#    _instance = None
-
-#    # aqui ele cria o método __new__, que é o método que cria a instância da classe
-#    def __new__(cls):
-#        # aqui ele verifica se já existe uma instância da classe QuizFacade
-#        # ou seja se o atributo _instance é None, então ele cria uma instância
-#        if not cls._instance:
-#            # aqui ele usa o método super().__new__(cls) para criar uma instância da classe QuizFacade
-#            # para o atributo _instance
-#            cls._instance = super().__new__(cls)
-#            # aqui ele retorna a instância da classe QuizFacade.
-#            # Singleton, portanto, garante que só exista uma instância da classe QuizFacade
-#        return cls._instance
-
 
 # finalmente, aqui ele cria a instância da classe QuizFacade e atribui ao atributo quiz_facade com o nome do arquivo json
 if __name__ == "__main__":
