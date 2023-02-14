@@ -1,6 +1,19 @@
 # factory-facade-singleton-basic-quizapp
 
-# The code is using several design patterns to structure the program:
+# três padrões implementado com sucesso.
+
+# O padrão Singleton:
+
+é implementado na classe QuestionFactory onde garante que existe apenas uma instância da classe ao longo de todo o programa.
+
+# O padrão Factory:
+é implementado na classe QuestionFactory, pois é responsável pela criação de objectos das classes MultipleChoiceQuestion e TrueFalseQuestion, com base nos dados de entrada.
+
+# O padrão Facade: 
+é implementado na classe QuizFacade, que fornece uma interface simplificada à classe Quiz e esconde a complexidade do Quiz e das suas classes subjacentes do cliente. A classe QuizFacade utiliza a classe Quiz e a classe QuestionFacade para carregar perguntas e executar o Quiz.
+
+-----------------------------------------------------------------------------------------------------------------------------
+# três padrões parcialmente implementado...
 
 # Factory pattern: 
 The QuestionFactory class acts as a factory, creating different types of questions based on the data provided. The create_question method takes in a question_data dictionary
