@@ -1,6 +1,6 @@
 # factory-facade-singleton-basic-quizapp
 
-# três padrões implementado com sucesso.
+# três padrões implementado com sucesso (código entregue no dia 16 de fevereiro)
 
 # O padrão Singleton:
 
@@ -13,7 +13,7 @@
 é implementado na classe QuizFacade, que fornece uma interface simplificada à classe Quiz e esconde a complexidade do Quiz e das suas classes subjacentes do cliente. A classe QuizFacade utiliza a classe Quiz e a classe QuestionFacade para carregar perguntas e executar o Quiz.
 
 -----------------------------------------------------------------------------------------------------------------------------
-# três padrões parcialmente implementado...
+# três padrões parcialmente implementado (código entregue no dia 30 de janeiro )
 
 # Factory pattern: 
 The QuestionFactory class acts as a factory, creating different types of questions based on the data provided. The create_question method takes in a question_data dictionary
